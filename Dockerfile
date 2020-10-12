@@ -39,4 +39,5 @@ COPY --chown=www-data:www-data . /var/www/html/
 
 EXPOSE 80 443
 
+
 # ENTRYPOINT ["sh", "/var/www/html/entrypoint.sh"]
