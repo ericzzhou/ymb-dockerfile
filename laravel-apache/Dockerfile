@@ -29,7 +29,7 @@ RUN docker-php-ext-configure opcache --enable-opcache \
     && docker-php-ext-install opcache gd
 
 # 配置 opcache
-COPY ./opcache.ini $PHP_INI_DIR/conf.d/
+COPY ./laravel-apache/opcache.ini $PHP_INI_DIR/conf.d/
 
 # 安装Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
