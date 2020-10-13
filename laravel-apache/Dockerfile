@@ -9,7 +9,7 @@ RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf
 
 RUN pwd
 # 自定义apache配置
-COPY ./apache.conf /etc/apache2/sites-enabled/000-default.conf
+COPY ./laravel-apache/apache.conf /etc/apache2/sites-enabled/000-default.conf
 
 #启用伪静态
 # RUN ln -s /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enable/rewrite.load
