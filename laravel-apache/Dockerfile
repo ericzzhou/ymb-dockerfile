@@ -15,8 +15,8 @@ COPY ./apache.conf /etc/apache2/sites-enabled/000-default.conf
 # RUN ln -s /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enable/rewrite.load
 RUN a2enmod rewrite
 
+# 相关依赖必须手动安装
 RUN apt-get update \
-    # 相关依赖必须手动安装
     && apt-get install -y \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
