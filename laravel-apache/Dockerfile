@@ -7,6 +7,7 @@ ENV APACHE_LOG_DIR /var/www/html/storage/logs
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
 RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
 
+RUN pwd
 # 自定义apache配置
 COPY ./apache.conf /etc/apache2/sites-enabled/000-default.conf
 
